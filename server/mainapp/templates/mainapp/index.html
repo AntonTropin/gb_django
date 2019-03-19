@@ -1,114 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'server/master.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Job'Store</title>
-    <link rel="stylesheet" href="/static/mainapp/css/css.css">
-</head>
+{% block page_tittle %}
+Job'Store
+{% endblock %}
 
-<body class="body">
-
-    <header class="header">
-
-        <div class="header_presentation">
-            <div class="brand">
-                <a href="/main/" class="main_page">
-                    <div class="brand_name">Job'Store</div>
-                    <div class="brand_description">Магазин техники Apple</div>
-                </a>
-            </div>
-
-            <div class="open">
-                <img src="/static/mainapp/media/open_sign.png" alt="" class="open_sign">
-                <div class="open_time">с 10:00 до 21:00</div>
-            </div>
-
-            <div class="contacts">
-                <div class="contacts_name">
-                    <div class="phone_number_name">phone number:</div>
-                    <div class="email_name">email:</div>
-                    <div class="telegram_name">telegram:</div>
-                </div>
-                <div class="contacts_data">
-                    <div class="phone_number">+7 (495) 555 77 55</div>
-                    <div class="email">hello@jobstore.ru</div>
-                    <div class="telegram">@jobstore</div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="menu_panel">
-        <ul class="navigation_menu">
-            <li class="menu_li"><a class="menu_a" href="mac.html">Mac</a>
-                <div class="wrapper_secondfloor">
-                    <ul class="navigation_menu_secondfloor">
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iMac</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">MacBook Pro</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">MacBook Air</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">MacBook</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">Mac Pro</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">Mac Mini</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="menu_li"><a class="menu_a" href="iphone.html">iPhone</a>
-                <div class="wrapper_secondfloor">
-                    <ul class="navigation_menu_secondfloor">
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPhone 6</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPhone 6s</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPhone 7</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPhone 8</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPhone X</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPhone Xs</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="menu_li"><a class="menu_a" href="watch.html">Watch</a>
-                <div class="wrapper_secondfloor">
-                    <ul class="navigation_menu_secondfloor">
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">Watch Series 4</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">Watch 4 Nike+</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">Watch Series 3</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">Watch 3 Nike+</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">Watch Series 2</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">Watch 2 Nike+</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="menu_li"><a class="menu_a" href="watch.html">iPad</a>
-                <div class="wrapper_secondfloor">
-                    <ul class="navigation_menu_secondfloor">
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPad Pro 12.9</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPad Pro 11</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPad Pro 10.5</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPad 2018</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPad 2017</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">iPad Mini</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="menu_li"><a class="menu_a" href="watch.html">TV</a>
-                <div class="wrapper_secondfloor">
-                    <ul class="navigation_menu_secondfloor">
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">Apple TV 4K</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">Apple TV 4</a></li>
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">Apple HomePod</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="menu_li"><a class="menu_a" href="/support/">Поддержка</a></li>
-            <li class="menu_li"><a class="menu_a_graphic" href="cart.html"><img class="icon_link" src="/static/mainapp/media/icons8-shopping_bag.png" alt="cart"></a></li>
-            <li class="menu_li"><a class="menu_a_graphic" href="search.html"><img class="icon_link" src="/static/mainapp/media/icons8-search.png" alt="search"></a></li>
-        </ul>
-
-    </div>
-
-
-
-
-    <div class="wrapper">
+{% block page_content %}
         <main class="main">
 
             <div class="sales">
@@ -266,13 +162,4 @@
 
 
         </main>
-    </div>
-
-
-    <footer class="footer">
-        <div class="copy">&copy; Все права защищены у Алексея Кадочникова</div>
-    </footer>
-
-</body>
-
-</html>
+{% endblock %} 
