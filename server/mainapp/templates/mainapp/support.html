@@ -1,0 +1,40 @@
+{% extends 'server/master.html' %}
+
+{% block page_tittle %}
+Support
+{% endblock %}
+
+{% block page_content %}
+<main class="main">
+    <div class="main_header">Поддержка</div>
+
+    <div class="support">
+        <div class="wrapper_support">
+        </div>
+    </div>
+
+    <form class="user_form">
+        <div class="data">
+            <div class="personal_data">
+                <input class="user_form_personal_data" type="text" placeholder="имя" size="32" height="15">
+                <input class="user_form_personal_data" type="text" placeholder="почта" size="32">
+                <input class="user_form_personal_data" type="text" placeholder="тема/устройство" size="32">
+            </div>
+            <div class="textarea_data">
+                <textarea class="user_form_area" type="text" cols='30' rows="10" placeholder="Ваше сообщение"></textarea>
+            </div>
+        </div>
+        <button class="send_button">Отправить</button>
+    </form>
+
+    <div class="main_header map_name">Наш адрес</div>
+    
+    <div class="adress">г.Москва, Новинский бульвар, дом 8</div>
+
+    <div class="map_script">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4cbd5591d5aa58cba99fbed1906fb4d7f9b11f70aac4137d35e2cd4b1a35ac5f&amp;width=1160&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+
+
+</main>
+{% endblock %}

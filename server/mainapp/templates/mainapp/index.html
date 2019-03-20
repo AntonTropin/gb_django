@@ -1,0 +1,41 @@
+{% extends 'server/master.html' %}
+
+{% block page_tittle %}
+Job'Store
+{% endblock %}
+
+{% block page_content %}
+        <main class="main">
+
+            <div class="sales">
+                <div class="main_header">Февральские акции</div>
+
+                <div class="sales_content">
+
+                    {% for itm in args %}
+                    <div class="product_vision_one">
+                            <img class="img_vision_one" src="{{ itm.src }}" alt="">
+                            <div class="name_vision_one">
+                                    {{ itm.name }}
+                            </div>
+                            <div class="name_vision_one">
+                                    {{ itm.description }}
+                            </div>
+                            <div class="price">
+                                <div class="old_price">{{ itm.old_price }}</div>
+                                <div class="new_price">{{ itm.new_price }}</div>
+                            </div>
+    
+                            <button class="buy_button">
+                                В корзину
+                            </button>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+
+
+        </main>
+{% endblock %} 
