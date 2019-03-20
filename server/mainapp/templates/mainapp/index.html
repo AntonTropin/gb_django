@@ -12,149 +12,25 @@ Job'Store
 
                 <div class="sales_content">
 
+                    {% for itm in args %}
                     <div class="product_vision_one">
-                        <img class="img_vision_one" src="/static/mainapp/media/ipad-pro-12in-cell-select-gold.jpg" alt="">
-                        <div class="name_vision_one">
-                            Apple iPad Pro 12.9"(2017)
+                            <img class="img_vision_one" src="{{ itm.src }}" alt="">
+                            <div class="name_vision_one">
+                                    {{ itm.name }}
+                            </div>
+                            <div class="name_vision_one">
+                                    {{ itm.description }}
+                            </div>
+                            <div class="price">
+                                <div class="old_price">{{ itm.old_price }}</div>
+                                <div class="new_price">{{ itm.new_price }}</div>
+                            </div>
+    
+                            <button class="buy_button">
+                                В корзину
+                            </button>
                         </div>
-                        <div class="name_vision_one">
-                            512GB Wi-Fi + Cellular Gold
-                        </div>
-                        <div class="price">
-                            <div class="old_price">91.990₽</div>
-                            <div class="new_price">86.990₽</div>
-                        </div>
-
-                        <button class="buy_button">
-                            В корзину
-                        </button>
-                    </div>
-
-                    <div class="product_vision_one">
-                        <img class="img_vision_one" src="/static/mainapp/media/ipad-wifi-select-gold-201803.212x212.png" alt="">
-                        <div class="name_vision_one">
-                            Apple iPad (2018)
-                        </div>
-                        <div class="name_vision_one">
-                            128GB Wi-Fi + Cellular Gold
-                        </div>
-                        <div class="price">
-                            <div class="old_price">42.490₽</div>
-                            <div class="new_price">39.490₽</div>
-                        </div>
-
-                        <button class="buy_button">
-                            В корзину
-                        </button>
-                    </div>
-
-                    <div class="product_vision_one">
-                        <img class="img_vision_one" src="/static/mainapp/media/iphone7-rosegold-select-2016_av1.212x212.png" alt="">
-                        <div class="name_vision_one">
-                            Apple iPhone 7
-                        </div>
-                        <div class="name_vision_one">
-                            32GB Rose Gold
-                        </div>
-                        <div class="price">
-                            <div class="old_price">34.990₽</div>
-                            <div class="new_price">31.990₽</div>
-                        </div>
-
-                        <button class="buy_button">
-                            В корзину
-                        </button>
-                    </div>
-
-                    <div class="product_vision_one">
-                        <img class="img_vision_one" src="/static/mainapp/media/mnng2ru.212x212.jpeg" alt="">
-                        <div class="name_vision_one">
-                            Apple Watch Series 2
-                        </div>
-                        <div class="name_vision_one">
-                            38mm, silver, алюминевые
-                        </div>
-                        <div class="price">
-                            <div class="old_price">91.990₽</div>
-                            <div class="new_price">86.990₽</div>
-                        </div>
-
-                        <button class="buy_button">
-                            В корзину
-                        </button>
-                    </div>
-
-                    <div class="product_vision_one">
-                        <img class="img_vision_one" src="/static/mainapp/media/MacBookAirSale.jpg" alt="">
-                        <div class="name_vision_one">
-                            MacBook Air 13'' (2017)
-                        </div>
-                        <div class="name_vision_one">
-                            1.8Ghz, 8Gb, 128Gb (РСТ)
-                        </div>
-                        <div class="price">
-                            <div class="old_price">71.990₽</div>
-                            <div class="new_price">61.990₽</div>
-                        </div>
-
-                        <button class="buy_button">
-                            В корзину
-                        </button>
-                    </div>
-
-                    <div class="product_vision_one">
-                        <img class="img_vision_one" src="/static/mainapp/media/tv4.png" alt="">
-                        <div class="name_vision_one">
-                            Apple TV 4'' (2017)
-                        </div>
-                        <div class="name_vision_one">
-                            32Gb
-                        </div>
-                        <div class="price">
-                            <div class="old_price">13.990₽</div>
-                            <div class="new_price">10.990₽</div>
-                        </div>
-
-                        <button class="buy_button">
-                            В корзину
-                        </button>
-                    </div>
-
-                    <div class="product_vision_one">
-                        <img class="img_vision_one" src="/static/mainapp/media/beats_one.jpeg" alt="">
-                        <div class="name_vision_one">
-                            Беспроводные наушники
-                        </div>
-                        <div class="name_vision_one">
-                            Beats x
-                        </div>
-                        <div class="price">
-                            <div class="old_price">8.990₽</div>
-                            <div class="new_price">7.490₽</div>
-                        </div>
-
-                        <button class="buy_button">
-                            В корзину
-                        </button>
-                    </div>
-
-                    <div class="product_vision_one">
-                        <img class="img_vision_one" src="/static/mainapp/media/beats_two.jpeg" alt="">
-                        <div class="name_vision_one">
-                            Наушники Beats
-                        </div>
-                        <div class="name_vision_one">
-                            Solo3 Wireless
-                        </div>
-                        <div class="price">
-                            <div class="old_price">71.990₽</div>
-                            <div class="new_price">61.990₽</div>
-                        </div>
-
-                        <button class="buy_button">
-                            В корзину
-                        </button>
-                    </div>
+                    {% endfor %}
 
                 </div>
             </div>
