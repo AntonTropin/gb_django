@@ -2,107 +2,54 @@ from django.db import models
 
 # Create your models here.
 
-class Product(models.Model):
-    name = models.CharField(
-        max_length=255, 
-        blank=True,
-        null=False,
-        )
-
-    def __str__(self):
-        return self.name
-
 class Category(models.Model):
     name = models.CharField(
-        max_length=255, 
-        blank=True,
-        null=False,
+        max_length=255,
+        blank = True,
+        null = True, 
+        default = 'empty', 
         )
 
     def __str__(self):
         return self.name
 
 
-# class Type(models.Model):
-#     name = models.CharField(max_length=255)
+class Type(models.Model):
+    name = models.CharField(
+        max_length=255,
+        blank = True,
+        null = True,
+        )
 
-#     def __str__(self):
-#         return self.name    
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.CASCADE,
+        )
 
-# class Colour(models.Model):
-#     name = models.CharField(max_length=255)
+    def __str__(self):
+        return self.name    
 
-#     def __str__(self):
-#         return self.name
 
-# class Diagonal(models.Model):
-#     name = models.CharField(max_length=255)
+class Product(models.Model):
 
-#     def __str__(self):
-#         return self.name
+    category = models.ForeignKey(
+        Category,
+        on_delete = models.CASCADE,
+    )
 
-# class Memory(models.Model):
-#     name = models.CharField(max_length=255)
+    type = models.ForeignKey(
+        Type,
+        on_delete = models.CASCADE,
+    )
 
-#     def __str__(self):
-#         return self.name
+    price = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        default = 0,
+        )
 
-# class Processor(models.Model):
-#     name = models.CharField(max_length=255)
-
-#     def __str__(self):
-#         return self.name
-
-# class Features(models.Model):
-#     name = models.CharField(max_length=255)
-
-#     def __str__(self):
-#         return self.name
-
-# class Graphics(models.Model):
-#     name = models.CharField(max_length=255)
-
-#     def __str__(self):
-#         return self.name
-
-# class Storage(models.Model):
-#     name = models.CharField(max_length=255)
-
-#     def __str__(self):
-#         return self.name
-
-# class Band(models.Model):
-#     name = models.CharField(max_length=255)
-
-#     def __str__(self):
-#         return self.name
-
-# class Case(models.Model):
-#     name = models.CharField(max_length=255)
-
-#     def __str__(self):
-#         return self.name
-
-# class Connectivity(models.Model):
-#     name = models.CharField(max_length=255)
-
-#     def __str__(self):
-#         return self.name
-
-# class Year(models.Model):
-#     name = models.CharField(max_length=255)
-
-#     def __str__(self):
-#         return self.name
-
-# class Description(models.Model):
-#     name = models.TextField()
-
-#     def __str__(self):
-#         return self.name
-
-# class Photo(models.Model):
-#     name = models.ImageField(upload_to=​'products_images'​, blank=​True​)
-
-#     def __str__(self):
-#         return self.name
+    discount = models.DecimalField(
+        max_digits=2,
+        decimal_places=2,
+        default = 0,
+    )
