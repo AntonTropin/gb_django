@@ -22,3 +22,4 @@ urlpatterns = [
     path('products/', include('productsapp.urls')),
     path('', include('mainapp.urls')),
 ]
+
