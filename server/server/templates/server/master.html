@@ -46,12 +46,14 @@
     <div class="menu_panel">
         <ul class="navigation_menu">
 
-            {% for itm in Category %}
-            <li class="menu_li"><a class="menu_a" href="{% url pro %}">{{ Category.name }}</a>
+            {% for itm in categorys %}
+            <li class="menu_li"><a class="menu_a" href="{% url 'productsapp:main' pk=itm.id %}">{{ categorys.name }}</a>
                 <div class="wrapper_secondfloor">
                     <ul class="navigation_menu_secondfloor">
-                        {% for itm in Type %}
-                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">{{ Type.name }}</a></li>
+                        {% for i in types %}
+                            {% if itm.id == types.category  %}
+                                <li class="menu_secondfloor"><a href="" class="a_secondfloor">{{ types.name }}</a></li>
+                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>

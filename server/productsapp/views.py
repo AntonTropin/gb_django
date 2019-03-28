@@ -8,8 +8,9 @@ def product_list(requiest, pk):
         requiest, 
         'productsapp/product_list.html',
         {
-            'categorys' : Category.objects.get(id=pk), 
-            'types' : Type.objects.get(category=pk),
+            'categorys' : Category.objects.all(), 
+            'types' : Type.objects.all(),
+            'product' : Product.objects.all(),
         }
     )
 
