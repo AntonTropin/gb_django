@@ -45,6 +45,19 @@
 
     <div class="menu_panel">
         <ul class="navigation_menu">
+
+            {% for itm in Category %}
+            <li class="menu_li"><a class="menu_a" href="{% url pro %}">{{ Category.name }}</a>
+                <div class="wrapper_secondfloor">
+                    <ul class="navigation_menu_secondfloor">
+                        {% for itm in Type %}
+                        <li class="menu_secondfloor"><a href="" class="a_secondfloor">{{ Type.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            {% endfor %}
+
             <li class="menu_li"><a class="menu_a" href="mac.html">Mac</a>
                 <div class="wrapper_secondfloor">
                     <ul class="navigation_menu_secondfloor">
